@@ -13,7 +13,7 @@ require('winston-mongodb').MongoDB;
 const reqLogger = new (winston.Logger)({
     transports: [
         new(winston.transports.MongoDB)({
-            db : 'mongodb://localhost:27017/logSystem',
+            db : 'mongodb://54.241.150.45:27017,13.56.58.166:27018,54.215.228.194:27019/logSystem?replicaSet=logdb-replica-set',
             collection: 'useractivitylogs',
             //level:'info'
             // expireAfterSeconds: 2;
@@ -21,16 +21,6 @@ const reqLogger = new (winston.Logger)({
     ],
 });
 
- const reqLogger2 = new (winston.Logger)({
-     transports: [
-         new(winston.transports.MongoDB)({
-             db : 'mongodb://localhost:27017/logSystem',
-             collection: 'useractivitylogs2',
-             //level:'info'
-             // expireAfterSeconds: 2;
-         })
-     ],
- });
 
 
 /* GET users listing. */

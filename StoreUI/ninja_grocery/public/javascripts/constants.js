@@ -4,8 +4,8 @@ var server_port_pc="3000";
 //var server_ip_sc="13.56.155.199";
 var server_ip_sc="ninja-sc-load-108525937.us-west-1.elb.amazonaws.com";
 var server_port_sc="9000";
-var payment_api_endpoint = "http://54.193.66.242:5000/payment";
-var order_api_endpoint = "http://54.193.66.242:4000/order";
+var payment_api_endpoint = "http://cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:5000/payment";
+var order_api_endpoint = "http://cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000/order";
 
 module.exports.payment_api_endpoint=payment_api_endpoint;
 module.exports.order_api_endpoint=order_api_endpoint;

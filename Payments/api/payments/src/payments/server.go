@@ -32,7 +32,7 @@ var mongodb_database = "payments"
 var mongodb_collection = "payment"*/
 
 //Local DB payment log configuration 
-var mongodb_log_server = "localhost:27017"
+//var mongodb_log_server = "localhost:27017"
 var mongodb_log_database = "logSystem"
 var mongodb_log_collection = "paymentactivitylogs"
 
@@ -44,7 +44,7 @@ var mongodb_collection = "payments"
 
 //DB payment log configuration 
 
-//var mongodb_log_server = "localhost:27015"
+var mongodb_log_server = "mongodb://54.241.150.45:27017,13.56.58.166:27018,54.215.228.194:27019/logSystem?replicaSet=logdb-replica-set"
 //var mongodb_log_database = "logSystem"
 //var mongodb_log_collection = "paymentactivitylogs"
 
@@ -80,12 +80,11 @@ Log Writer implementation to write logs to Logging module
 */
 func (mw *MongoWriter) Write(p []byte) (n int, err error) {
 	var log_info = strings.Split(string(p)," ");
-	
 
 	client := http.Client{}
 	var jsonprep string = `{"_id":"`+strings.TrimSpace(log_info[2])+`"}`
     var jsonStr = []byte(jsonprep)
-    url:="http://localhost:7000/getEmail"
+    url:="http://localhost:7001/getEmail"
     req, err := http.NewRequest("POST", url, bytes.NewBuffer(jsonStr))
     req.Header.Set("Content-Type", "application/json")
     resp, err := client.Do(req)
@@ -101,6 +100,7 @@ func (mw *MongoWriter) Write(p []byte) (n int, err error) {
     err = c.Insert(bson.M{
         "timestamp": time.Now(),
         "username": email,
+        "month": time.Now().UTC().Format("January"),
         "message" : email+" has paid successfully",
         "amount": amount,//Convert to float
 		"requestUrl": strings.TrimSpace(log_info[4]),
