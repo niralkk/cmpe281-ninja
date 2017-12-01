@@ -21,6 +21,30 @@ const reqLogger = new (winston.Logger)({
     ],
 });
 
+<<<<<<< HEAD
+||||||| merged common ancestors
+ const reqLogger2 = new (winston.Logger)({
+     transports: [
+         new(winston.transports.MongoDB)({
+             db : 'mongodb://localhost:27017/logSystem',
+             collection: 'useractivitylogs2',
+             //level:'info'
+             // expireAfterSeconds: 2;
+         })
+     ],
+ });
+=======
+ /*const reqLogger2 = new (winston.Logger)({
+     transports: [
+         new(winston.transports.MongoDB)({
+             db : 'mongodb://54.241.150.45:27017,13.56.58.166:27018,54.215.228.194:27019/logSystem?replicaSet=logdb-replica-set',
+             collection: 'useractivitylogs',
+             //level:'info'
+             // expireAfterSeconds: 2;
+         })
+     ],
+ });*/
+>>>>>>> 140a7d04da73127d3fd62be11404077638f1a5ff
 
 
 /* GET users listing. */
@@ -34,8 +58,10 @@ router.get('/profile',isLoggedIn, function(req,res,next){
 });
 
 router.get('/logout', isLoggedIn, function(req, res, next){
+    //console.log(req.body.email);
     req.logOut();
-    reqLogger.info(`${req.body.email} has logged out`,{
+
+    reqLogger.info(`user has logged out`,{
         httpRequest:{
             status: res.statusCode,
             requestUrl: req.url,
@@ -61,8 +87,8 @@ router.post('/signup', passport.authenticate('local.signup',{
     failureRedirect: '/user/signup',
     failureFlash: true
 }),function(request, response) {
-    console.log("inside signup");
-        reqLogger2.info(`${request.body.email} has SignedUp in`,{
+    console.log(request.body.email);
+        reqLogger.info(`${request.body.email} has SignedUp in`,{
             httpRequest:{
                 status: response.statusCode,
                 requestUrl: request.url,
