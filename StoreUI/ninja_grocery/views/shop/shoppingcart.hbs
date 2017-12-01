@@ -1,3 +1,30 @@
+<script type="text/javascript">
+   /* function useraction(id) {
+        console.log("here");
+        var request = new Request('/productcatalog/addtocart/'+id, {
+            method: 'POST'
+        });
+
+        fetch(request).then(function(response) {
+            var result = response.json().then(function(j){
+                //alert(j[0]._id);
+                if(j.status==true){
+                    alert("added to cart");
+                }
+                else{
+                    alert("unable to add");
+                }
+
+            });
+
+        });
+    }
+*/
+function groupShare(user){
+    alert("Share this link with your friends to allow them to join the cart!\n\n http://localhost:3000/"+user);
+}
+</script>
+
 {{# if products }}
     <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
@@ -43,6 +70,7 @@
     <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
             <a href="/checkout" type="button" class="btn btn-success">Checkout</a>
+            <button onclick="groupShare({{user}})" type="button" class="btn btn-success">Group Share</a>
         </div>
     </div>
 {{ else }}
