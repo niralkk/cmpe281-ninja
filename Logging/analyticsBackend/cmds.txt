@@ -30,10 +30,18 @@ http://log-api-loadbalancer-1738658768.us-west-1.elb.amazonaws.com:3001/signupco
 http://log-api-loadbalancer-1738658768.us-west-1.elb.amazonaws.com:3001/logincount
 
 
+MongoDB datastore
+const dbHost = 'mongodb://mongoOne:27017,mongoTwo:27018,mongoThree:27019/logSystem?replicaSet=logdb-replica-set';
+
+
 Dashboard:
 http://ec2-52-53-255-100.us-west-1.compute.amazonaws.com:3000/
 
-
+Added to the api server to solve the CORS issue while fetching data from frontend
+res.setHeader('Access-Control-Allow-Origin', '*');
+res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,contenttype');
+res.setHeader('Access-Control-Allow-Credentials', true);
 
 
 
