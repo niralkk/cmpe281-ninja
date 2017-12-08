@@ -47,7 +47,7 @@ router.get('/',isLoggedIn, function(req, res, next) {
 
             res.render('shop/shoppingcart', { title: 'Ninja Shopping Cart',
                 total_price : price , total_quantity: quantity,
-                products: productChunks, layout:'shoppingcart',user:user});
+                products: productChunks, layout:'shoppingcart',user:req.session.passport.user});
         }
     });
 });

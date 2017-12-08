@@ -21,19 +21,7 @@ const reqLogger = new (winston.Logger)({
     ],
 });
 
-<<<<<<< HEAD
-||||||| merged common ancestors
- const reqLogger2 = new (winston.Logger)({
-     transports: [
-         new(winston.transports.MongoDB)({
-             db : 'mongodb://localhost:27017/logSystem',
-             collection: 'useractivitylogs2',
-             //level:'info'
-             // expireAfterSeconds: 2;
-         })
-     ],
- });
-=======
+
  /*const reqLogger2 = new (winston.Logger)({
      transports: [
          new(winston.transports.MongoDB)({
@@ -44,7 +32,6 @@ const reqLogger = new (winston.Logger)({
          })
      ],
  });*/
->>>>>>> 140a7d04da73127d3fd62be11404077638f1a5ff
 
 
 /* GET users listing. */
