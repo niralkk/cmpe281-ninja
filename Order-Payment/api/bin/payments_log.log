@@ -1,0 +1,39 @@
+Initializing...
+Starting write workers..
+Worker  1 : Started
+Worker  2 : Started
+Worker  3 : Started
+Worker  4 : Started
+Started payment server...
+[negroni] listening on :5000
+Ping - Payment API running
+[negroni] 2017-12-02T01:56:39Z | 200 | 	 124.656µs | 54.193.66.242:5000 | GET / 
+Amount written is:  49
+New payment received
+Payment recorded in DB
+[negroni] 2017-12-02T06:18:59Z | 200 | 	 79.337441ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:5000 | POST /payment 
+Amount written is:  28
+New payment received
+Payment recorded in DB
+[negroni] 2017-12-02T06:58:09Z | 200 | 	 47.176892ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:5000 | POST /payment 
+Ping - Payment API running
+[negroni] 2017-12-04T16:20:20Z | 200 | 	 86.905µs | 54.193.66.242:5000 | GET / 
+Ping - Payment API running
+[negroni] 2017-12-05T02:55:14Z | 200 | 	 95.642µs | 54.193.115.150:5000 | GET / 
+Ping - Payment API running
+[negroni] 2017-12-06T10:40:41Z | 200 | 	 97.564µs | 54.193.66.242:5000 | GET / 
+[negroni] 2017-12-06T10:40:41Z | 404 | 	 50.289µs | 54.193.66.242:5000 | GET /favicon.ico 
+Ping - Payment API running
+[negroni] 2017-12-06T11:33:49Z | 200 | 	 105.419µs | ec2-54-193-66-242.us-west-1.compute.amazonaws.com | GET / 
+Ping - Payment API running
+[negroni] 2017-12-06T12:34:29Z | 200 | 	 115.322µs | 54.193.66.242:5000 | GET / 
+[negroni] 2017-12-06T12:34:29Z | 404 | 	 51.543µs | 54.193.66.242:5000 | GET /favicon.ico 
+Ping - Payment API running
+[negroni] 2017-12-06T12:53:30Z | 200 | 	 106.856µs | 54.193.66.242:5000 | GET / 
+[negroni] 2017-12-06T12:53:35Z | 404 | 	 60.741µs | 54.193.66.242:5000 | GET /favicon.ico 
+Ping - Payment API running
+[negroni] 2017-12-06T23:51:20Z | 200 | 	 100.853µs |  | GET / 
+Ping - Payment API running
+[negroni] 2017-12-07T17:50:41Z | 200 | 	 95.791µs |  | GET / 
+Ping - Payment API running
+[negroni] 2017-12-08T03:20:10Z | 200 | 	 94.584µs |  | GET / 

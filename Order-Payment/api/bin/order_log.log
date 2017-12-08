@@ -1,0 +1,18 @@
+Initializing...
+Starting write workers..
+Worker  1 : Started
+Worker  2 : Started
+Worker  3 : Started
+Worker  4 : Started
+Started order server...
+[negroni] listening on :4000
+Ping - Payment API running
+[negroni] 2017-12-01T09:37:08Z | 200 | 	 140.577µs | 54.193.66.242:4000 | GET / 
+Ping - Payment API running
+[negroni] 2017-12-01T09:37:28Z | 200 | 	 60.079µs | 54.193.66.242:4000 | GET / 
+
+Writing order to DB
+[negroni] 2017-12-01T09:42:01Z | 200 | 	 173.508µs | 54.193.66.242:4000 | POST /order 
+
+Writing order to DB
+[negroni] 2017-12-01T09:44:40Z | 200 | 	 97.621µs | 54.193.66.242:4000 | POST /order 

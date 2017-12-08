@@ -1,0 +1,125 @@
+Initializing...
+Starting write workers..
+Worker  1 : Started
+Worker  2 : Started
+Worker  3 : Started
+Worker  4 : Started
+Started order server...
+[negroni] listening on :4000
+[negroni] 2017-12-01T10:11:09Z | 405 | 	 1.097402ms | 54.193.66.242:4000 | POST / 
+Ping - Payment API running
+[negroni] 2017-12-01T10:11:17Z | 200 | 	 137.055µs | 54.193.66.242:4000 | GET / 
+Ping - Payment API running
+[negroni] 2017-12-01T10:11:58Z | 200 | 	 64.539µs | 54.193.66.242:4000 | GET / 
+Ping - Payment API running
+[negroni] 2017-12-01T10:11:59Z | 200 | 	 57.4µs | 54.193.66.242:4000 | GET / 
+Ping - Payment API running
+[negroni] 2017-12-01T10:14:41Z | 200 | 	 79.531µs | 54.193.66.242:4000 | GET / 
+Placing the order for: 5a2139960c570b478688fa9d
+
+Obtained orders from DB..
+
+Orders are:
+ []
+[negroni] 2017-12-01T11:15:43Z | 200 | 	 3.404066ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2139960c570b478688fa9d 
+Placing the order for: 5a2139960c570b478688fa9d
+
+Obtained orders from DB..
+
+Orders are:
+ []
+[negroni] 2017-12-01T11:26:50Z | 200 | 	 3.434034ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2139960c570b478688fa9d 
+Placing the order for: 5a2139960c570b478688fa9d
+
+Obtained orders from DB..
+
+Orders are:
+ []
+[negroni] 2017-12-01T11:31:39Z | 200 | 	 3.043108ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2139960c570b478688fa9d 
+Placing the order for: 5a2139960c570b478688fa9d
+
+Obtained orders from DB..
+
+Orders are:
+ [map[customerId:5a2139960c570b478688fa9d ItemDetails:map[coffee:map[Qty:1 Price:4] curd:map[Qty:1 Price:9] beer:map[Price:6 Qty:1] hersheys:map[Price:4 Qty:1] sweet bread:map[Qty:1 Price:3] kitkat:map[Price:1 Qty:1]] total:27 status:Order Placed timestamp:2017-12-01 03:42:19 -08:00 deliveryAddress:Berkeley _id:ObjectIdHex("5a21401c5013c4bf0b91df53") orderId:67949145-5b0c-4e6e-96f7-8aa7875bc86c]]
+[negroni] 2017-12-01T11:42:36Z | 200 | 	 4.715832ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2139960c570b478688fa9d 
+Placing the order for: 5a2139960c570b478688fa9d
+
+Obtained orders from DB..
+
+Orders are:
+ [map[total:27 status:Shipped timestamp:2017-12-01 03:42:19 -08:00 deliveryAddress:Berkeley _id:ObjectIdHex("5a21401c5013c4bf0b91df53") orderId:67949145-5b0c-4e6e-96f7-8aa7875bc86c customerId:5a2139960c570b478688fa9d ItemDetails:map[beer:map[Qty:1 Price:6] hersheys:map[Qty:1 Price:4] sweet bread:map[Qty:1 Price:3] kitkat:map[Qty:1 Price:1] coffee:map[Price:4 Qty:1] curd:map[Qty:1 Price:9]]] map[customerId:5a2139960c570b478688fa9d ItemDetails:map[curd:map[Price:9 Qty:1] beer:map[Qty:1 Price:6] hersheys:map[Qty:1 Price:4] sweet bread:map[Qty:1 Price:3] kitkat:map[Price:1 Qty:1] coffee:map[Price:4 Qty:1]] total:27 status:Order Placed timestamp:2017-12-01 03:44:58 -08:00 deliveryAddress:Berkeley _id:ObjectIdHex("5a2140bb5013c4bf0b91e172") orderId:5dd2f529-9af1-496c-a87f-ee3d07b43a0d]]
+[negroni] 2017-12-01T11:45:07Z | 200 | 	 3.308904ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2139960c570b478688fa9d 
+Placing the order for: 5a2139960c570b478688fa9d
+
+Obtained orders from DB..
+
+Orders are:
+ [map[orderId:67949145-5b0c-4e6e-96f7-8aa7875bc86c customerId:5a2139960c570b478688fa9d ItemDetails:map[sweet bread:map[Qty:1 Price:3] kitkat:map[Price:1 Qty:1] coffee:map[Qty:1 Price:4] curd:map[Qty:1 Price:9] beer:map[Qty:1 Price:6] hersheys:map[Price:4 Qty:1]] total:27 status:Delivered timestamp:2017-12-01 03:42:19 -08:00 deliveryAddress:Berkeley _id:ObjectIdHex("5a21401c5013c4bf0b91df53")] map[ItemDetails:map[kitkat:map[Price:1 Qty:1] coffee:map[Qty:1 Price:4] curd:map[Qty:1 Price:9] beer:map[Qty:1 Price:6] hersheys:map[Qty:1 Price:4] sweet bread:map[Qty:1 Price:3]] total:27 status:Shipped timestamp:2017-12-01 03:44:58 -08:00 deliveryAddress:Berkeley _id:ObjectIdHex("5a2140bb5013c4bf0b91e172") orderId:5dd2f529-9af1-496c-a87f-ee3d07b43a0d customerId:5a2139960c570b478688fa9d]]
+[negroni] 2017-12-01T11:48:00Z | 200 | 	 3.18003ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2139960c570b478688fa9d 
+
+Writing order to DB
+[negroni] 2017-12-01T11:50:27Z | 200 | 	 1.258786ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | POST /order 
+
+Writing order to DB
+[negroni] 2017-12-01T11:52:14Z | 200 | 	 153.07µs | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | POST /order 
+Placing the order for: 5a2139960c570b478688fa9d
+
+Obtained orders from DB..
+
+Orders are:
+ [map[status:Delivered timestamp:2017-12-01 03:42:19 -08:00 deliveryAddress:Berkeley _id:ObjectIdHex("5a21401c5013c4bf0b91df53") orderId:67949145-5b0c-4e6e-96f7-8aa7875bc86c customerId:5a2139960c570b478688fa9d ItemDetails:map[sweet bread:map[Qty:1 Price:3] kitkat:map[Qty:1 Price:1] coffee:map[Qty:1 Price:4] curd:map[Qty:1 Price:9] beer:map[Qty:1 Price:6] hersheys:map[Qty:1 Price:4]] total:27] map[status:Delivered timestamp:2017-12-01 03:44:58 -08:00 deliveryAddress:Berkeley _id:ObjectIdHex("5a2140bb5013c4bf0b91e172") orderId:5dd2f529-9af1-496c-a87f-ee3d07b43a0d customerId:5a2139960c570b478688fa9d ItemDetails:map[coffee:map[Qty:1 Price:4] curd:map[Qty:1 Price:9] beer:map[Qty:1 Price:6] hersheys:map[Qty:1 Price:4] sweet bread:map[Qty:1 Price:3] kitkat:map[Price:1 Qty:1]] total:27] map[deliveryAddress:Berkeley _id:ObjectIdHex("5a2142045013c4bf0b91e5cd") orderId:682b3e39-1163-4bb1-a1c3-e5d5630ce590 customerId:5a2139960c570b478688fa9d ItemDetails:map[snickers:map[Qty:1 Price:5] curd:map[Price:9 Qty:1] beer:map[Qty:1 Price:6]] total:20 status:Delivered timestamp:2017-12-01 03:50:27 -08:00] map[ItemDetails:map[oreo:map[Qty:1 Price:8]] total:8 status:Delivered timestamp:2017-12-01 03:52:14 -08:00 deliveryAddress:San Fransisco _id:ObjectIdHex("5a21426f5013c4bf0b91e76b") orderId:bd63b49e-dbbf-47bf-9db6-36c7a2e34544 customerId:5a2139960c570b478688fa9d]]
+[negroni] 2017-12-01T12:52:55Z | 200 | 	 3.756989ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2139960c570b478688fa9d 
+
+Writing order to DB
+[negroni] 2017-12-01T21:28:51Z | 200 | 	 164.675µs | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | POST /order 
+
+Writing order to DB
+[negroni] 2017-12-01T22:00:47Z | 200 | 	 172.584µs | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | POST /order 
+Placing the order for: 5a20bccf26b339464859c25c
+
+Obtained orders from DB..
+
+Orders are:
+ []
+[negroni] 2017-12-02T00:43:13Z | 200 | 	 3.424601ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a20bccf26b339464859c25c 
+Ping - Payment API running
+[negroni] 2017-12-02T02:31:15Z | 200 | 	 98.842µs | 54.183.56.96:4000 | GET / 
+Placing the order for: 5a2248f8d18d596a51d88687
+
+Obtained orders from DB..
+
+Orders are:
+ []
+[negroni] 2017-12-02T06:33:59Z | 200 | 	 3.408022ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2248f8d18d596a51d88687 
+Placing the order for: 5a2248f8d18d596a51d88687
+
+Obtained orders from DB..
+
+Orders are:
+ []
+[negroni] 2017-12-02T06:49:16Z | 200 | 	 3.105838ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a2248f8d18d596a51d88687 
+
+Writing order to DB
+[negroni] 2017-12-02T06:58:09Z | 200 | 	 166.292µs | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | POST /order 
+Placing the order for: 5a224e4d94653f6d8c624970
+
+Obtained orders from DB..
+
+Orders are:
+ [map[timestamp:2017-12-02 06:58:09 +00:00 deliveryAddress:San Jose _id:ObjectIdHex("5a224f035013c4bf0b964633") orderId:decbd2c0-c588-4fa3-8ebd-e8db9997f2a7 customerId:5a224e4d94653f6d8c624970 ItemDetails:map[snickers:map[Qty:1 Price:5] oreo:map[Qty:1 Price:8] beer:map[Qty:1 Price:6] curd:map[Qty:1 Price:9]] total:28 status:Order Placed]]
+[negroni] 2017-12-02T06:58:14Z | 200 | 	 3.74967ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a224e4d94653f6d8c624970 
+Placing the order for: 5a20bccf26b339464859c25c
+
+Obtained orders from DB..
+
+Orders are:
+ [map[orderId:b78a9d68-fffd-4397-a166-ff316f438750 customerId:5a20bccf26b339464859c25c ItemDetails:map[snickers:map[Qty:1 Price:5] curd:map[Qty:1 Price:9]] total:14 status:Delivered timestamp:2017-12-02 00:44:22 +00:00 deliveryAddress:201 S 4th St _id:ObjectIdHex("5a21f7675013c4bf0b94acf1")]]
+[negroni] 2017-12-02T17:58:48Z | 200 | 	 3.304189ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a20bccf26b339464859c25c 
+Placing the order for: 5a20bccf26b339464859c25c
+
+Obtained orders from DB..
+
+Orders are:
+ [map[orderId:b78a9d68-fffd-4397-a166-ff316f438750 customerId:5a20bccf26b339464859c25c ItemDetails:map[snickers:map[Qty:1 Price:5] curd:map[Qty:1 Price:9]] total:14 status:Delivered timestamp:2017-12-02 00:44:22 +00:00 deliveryAddress:201 S 4th St _id:ObjectIdHex("5a21f7675013c4bf0b94acf1")]]
+[negroni] 2017-12-02T18:02:16Z | 200 | 	 3.301637ms | cmpe281-project-balancer-1527179269.us-west-1.elb.amazonaws.com:4000 | GET /order/5a20bccf26b339464859c25c 
